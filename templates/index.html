@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+      crossorigin="anonymous"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:400,600,700"
+      rel="stylesheet"
+    />
+
+    <title>Forte</title>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}" />
+    <link
+      rel="icon"
+      href="https://cdn.glitch.com/e930c614-8f36-4e72-a086-89bdf2b8d7c0%2F10-109530_it-security-clip-art-blue-number-2-icon.png?v=1613540689405"
+    />
+
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+<div class="login-wrap">
+	<div class="login-html">
+		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
+		<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Details</label>
+		<div class="login-form">
+			<div class="sign-in-htm">
+                <form method="post" action="/login">
+				<div class="group">
+					<label for="email" class="label">Username</label>
+					<input id="email" name="email" type="text" class="input">
+				</div>
+				<div class="group">
+					<label for="password" class="label">Password</label>
+					<input id="password" name="password" type="password" class="input" data-type="password">
+				</div>
+
+				<div class="group">
+					<input type="submit" class="button" value="Sign In">
+				</div>
+                    </form>
+				<div class="hr"></div>
+
+			</div>
+            <div class="sign-up-htm">
+				<div class="group">
+					<label for="user" class="label">Please Login using your e-mail ID and Password. This site is protected using IP based filter. Every session has a timeout of 30 minutes for security purpose.</label>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

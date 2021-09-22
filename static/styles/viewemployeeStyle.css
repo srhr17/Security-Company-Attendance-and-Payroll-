@@ -1,0 +1,32 @@
+
+body {
+background: #233142;
+}
+
+th, td {
+  padding: 15px;
+  text-align: center;
+  width:290px;
+}
+
+#btn{
+  border-radius: 25px;
+  background: gray;
+  padding: 20px;
+}
+
+.button {
+  background-color: gray;
+  border-radius:12px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  position:absolute;
+  right: 5px;
+  top:2px;
+}

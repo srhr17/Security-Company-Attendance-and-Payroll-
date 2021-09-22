@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+      crossorigin="anonymous"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:400,600,700"
+      rel="stylesheet"
+    />
+
+    <title>View Company</title>
+    <link
+      rel="icon"
+      href="https://cdn.glitch.com/e930c614-8f36-4e72-a086-89bdf2b8d7c0%2F10-109530_it-security-clip-art-blue-number-2-icon.png?v=1613540689405"
+    />
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/viewemployeeStyle.css') }}" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="{{ url_for('static',filename='script.js') }}"></script>
+
+</head>
+<body>
+<input type="button" id="btn" value="Dashboard" onclick="location.href='/dashboard'" />
+<a href=downloadCompanyData class="button" >Download Data</a>
+<h2 style="color:white;text-align: center;">Company Records</h2>
+<div class="table-wrapper" style="overflow-x:auto;">
+    <table class="w3-table-all" style=" table-layout: fixed;text-align: center;">
+        <thead>
+        <tr>
+            <th>Company ID</th>
+            <th>Name</th>
+            <th>E-Mail</th>
+            <th>Phone Number</th>
+            <th>Address</th>
+            <th>Quotation</th>
+            <th>DOJ</th>
+            <th>GST Number</th>
+        </tr>
+        </thead>
+        <tbody>
+    {% for key,value in df.iterrows() %}
+        <tr>
+            <td  class="empid">{{value['CompanyID']}}</td>
+            <td>{{value['Name']}}</td>
+            <td>{{value['E-Mail']}}</td>
+            <td>{{value['Phone Number']}}</td>
+            <td>{{value['Address']}}</td>
+            <td>{{value['Quotation']}}</td>
+            <td>{{value['DOJ']}}</td>
+            <td>{{value['GST Number']}}</td>
+
+        </tr>
+    {% endfor %}
+        <tbody>
+    </table>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+      crossorigin="anonymous"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:400,600,700"
+      rel="stylesheet"
+    />
+
+    <title>Add Employee</title>
+    <link
+      rel="icon"
+      href="https://cdn.glitch.com/e930c614-8f36-4e72-a086-89bdf2b8d7c0%2F10-109530_it-security-clip-art-blue-number-2-icon.png?v=1613540689405"
+    />
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/employeeStyle.css') }}" />
+
+    <script src="script.js"></script>
+  </head>
+  <body>
+  <input type="button" id="btn" value="Dashboard" onclick="location.href='/dashboard'" />
+<div class="form-style-5">
+<form method="post" action="/add_employee">
+<fieldset>
+<legend><span class="number">1</span> Candidate Info</legend>
+<input type="text" id="name" name="name" placeholder="Name *" required>
+<input type="text" id="fathername" name="fathername" placeholder="Father Name *" required>
+<input type="email" id="email" name="email" placeholder="Email" required>
+<input type="text" id="phonenumber" name="phonenumber" placeholder="Phone Number *" required>
+<input type="text" id="emergencyphonenumber" name="emergencyphonenumber" placeholder="Emergency Phone Number " required>
+<textarea id="address" name="address" placeholder="Address *" required></textarea>
+<input type="text" id="education" name="education" placeholder="Education *" required>
+<input type="text" id="experience" name="experience" placeholder="Experience *" required>
+<input type="date" id="dob" name="dob" placeholder="Date of Birth *" required>
+
+
+</fieldset>
+<fieldset>
+<legend><span class="number">2</span> Work Info</legend>
+<input type="date" id="doj" name="doj" placeholder="Date of Joining *" required>
+<input type="text" id="salary" name="salary" placeholder="Salary *" required>
+<label for="job">Role:</label>
+<select id="job" name="job" required>
+<optgroup label="Indoors">
+  <option value="fishkeeping">Fishkeeping</option>
+  <option value="reading">Reading</option>
+  <option value="boxing">Boxing</option>
+  <option value="debate">Debate</option>
+  <option value="gaming">Gaming</option>
+  <option value="snooker">Snooker</option>
+  <option value="other_indoor">Other</option>
+</optgroup>
+<optgroup label="Outdoors">
+  <option value="football">Football</option>
+  <option value="swimming">Swimming</option>
+  <option value="fishing">Fishing</option>
+  <option value="climbing">Climbing</option>
+  <option value="cycling">Cycling</option>
+  <option value="other_outdoor">Other</option>
+</optgroup>
+</select>
+<input type="text" id="aadharnumber" name="aadharnumber" placeholder="Aadhar Number *" required>
+</fieldset>
+<input type="submit" value="Apply" />
+</form>
+</div>
+  </body>
+
+<!--  <body>-->
+<!--    <div class="container1">-->
+<!--      <h1>-->
+<!--        Add Employee-->
+<!--      </h1>-->
+
+<!--      <form>-->
+<!--        <div class="block">-->
+<!--          <label for="emp_name" class="words">Employee Name: </label>-->
+<!--          <input-->
+<!--            placeholder="employee name "-->
+<!--            class="emp_name"-->
+<!--            id="emp_name"-->
+<!--            name="name"-->
+<!--            required-->
+<!--            pattern="^[a-zA-Z ]*$"-->
+<!--          />-->
+<!--          <br />-->
+<!--          <br />-->
+<!--        </div>-->
+<!--        <div class="block">-->
+<!--          <label for="emp_name" class="words">Father's Name: </label>-->
+<!--          <input-->
+<!--            placeholder="father's name "-->
+<!--            class="emp_name"-->
+<!--            id="fath_name"-->
+<!--            name="fath_name"-->
+<!--            required-->
+<!--            pattern="^[a-zA-Z ]*$"-->
+<!--          />-->
+<!--          <br />-->
+<!--          <br />-->
+<!--        </div>-->
+<!--        <div class="block">-->
+<!--          <label for="emp_name" class="words">Address: </label>-->
+<!--          <input-->
+<!--            type="text"-->
+<!--            placeholder="Address "-->
+<!--            class="emp_name"-->
+<!--            id="address"-->
+<!--            name="address"-->
+<!--            required-->
+<!--            pattern="[A-Za-z0-9'\.\-\s\,]"-->
+<!--          />-->
+<!--          <br />-->
+<!--          <br />-->
+<!--        </div>-->
+<!--        <div class="block">-->
+<!--          <label for="emp_name" class="words">Phone Number: </label>-->
+<!--          <input-->
+<!--            type="number"-->
+<!--            placeholder=" phone number"-->
+<!--            class="emp_name"-->
+<!--            id="phone_no"-->
+<!--            name="phone_no"-->
+<!--            required-->
+<!--            pattern="[0-9]{10}"-->
+<!--          />-->
+<!--          <br />-->
+<!--          <br />-->
+<!--        </div>-->
+<!--        <div class="block">-->
+<!--          <label for="emp_name" class="words">Emergency Phone Number: </label>-->
+<!--          <input-->
+<!--            type="number"-->
+<!--            placeholder=" emergency phone number"-->
+<!--            class="emp_name"-->
+<!--            id="emer_no"-->
+<!--            name="emer_no"-->
+<!--            required-->
+<!--            pattern="[0-9]{10}"-->
+<!--          />-->
+<!--          <br />-->
+<!--          <br />-->
+<!--        </div>-->
+<!--        <div class="block">-->
+<!--          <label for="emp_name" class="words"-->
+<!--            >Educational Qualification:-->
+<!--          </label>-->
+<!--          <input-->
+<!--            type="text"-->
+<!--            placeholder="Educational Qualification"-->
+<!--            class="emp_name"-->
+<!--            id="edu_qual"-->
+<!--            name="edu_qual"-->
+<!--            required-->
+<!--            pattern="[A-Za-z0-9'\.\-\s\,]"-->
+<!--          />-->
+<!--          <br />-->
+<!--          <br />-->
+<!--        </div>-->
+<!--        <div class="block">-->
+<!--          <label for="emp_name" class="words">Experience: </label>-->
+<!--          <input-->
+<!--            type="text"-->
+<!--            placeholder="Experience"-->
+<!--            class="emp_name"-->
+<!--            id="experience"-->
+<!--            name="experience"-->
+<!--            required-->
+<!--            pattern="[A-Za-z0-9'\.\-\s\,]"-->
+<!--          />-->
+<!--          <br />-->
+<!--          <br />-->
+<!--        </div>-->
+<!--        <div class="block">-->
+<!--          <label for="emp_name" class="words">Date Of Birth: </label>-->
+<!--          <input-->
+<!--            type="date"-->
+<!--            placeholder="Date of birth"-->
+<!--            class="emp_name"-->
+<!--            id="dob"-->
+<!--            name="dob"-->
+<!--            required-->
+<!--            min="1920-01-01"-->
+<!--          />-->
+<!--          <br />-->
+<!--          <br />-->
+<!--        </div>-->
+<!--        <div class="block">-->
+<!--          <label for="emp_name" class="words">Date of Joining: </label>-->
+<!--          <input-->
+<!--            type="date"-->
+<!--            placeholder="Date of joining"-->
+<!--            class="emp_name"-->
+<!--            id="doj"-->
+<!--            name="doj"-->
+<!--            required-->
+<!--            min="1920-01-01"-->
+<!--          />-->
+<!--          <br />-->
+<!--          <br />-->
+<!--        </div>-->
+<!--        <div class="block">-->
+<!--          <label for="emp_name" class="words">Salary: </label>-->
+<!--          <input-->
+<!--            type="number"-->
+<!--            placeholder="Salary"-->
+<!--            class="emp_name"-->
+<!--            id="sal"-->
+<!--            name="sal"-->
+<!--            required-->
+<!--            min="100"-->
+<!--          />-->
+<!--          <br />-->
+<!--          <br />-->
+<!--        </div>-->
+<!--        <div class="block">-->
+<!--          <label for="emp_name" class="words">Aadhar Number: </label>-->
+<!--          <input-->
+<!--            type="number"-->
+<!--            placeholder="Aadhar No"-->
+<!--            class="emp_name"-->
+<!--            id="aadhar"-->
+<!--            name="aadhar"-->
+<!--            required-->
+<!--            pattern="^[2-9]{1}[0-9]{3}\\s[0-9]{4}\\s[0-9]{4}$"-->
+<!--          />-->
+<!--          <br />-->
+<!--          <br />-->
+<!--        </div>-->
+<!--        <div class="block">-->
+<!--          <label for="emp_name" class="words">Gender: </label>-->
+<!--          <span style="display:inline">-->
+<!--            <input-->
+<!--              type="radio"-->
+<!--              id="male"-->
+<!--              name="gender"-->
+<!--              value="male"-->
+<!--              style="display:inline"-->
+<!--            />-->
+<!--            <label for="male" style="display:inline">Male</label>-->
+<!--          </span>-->
+<!--          <span style="display:inline">-->
+<!--            <input-->
+<!--              type="radio"-->
+<!--              id="female"-->
+<!--              name="gender"-->
+<!--              value="female"-->
+<!--              style="display:inline"-->
+<!--            />-->
+<!--            <label for="female" class="" style="display:inline">Female</label>-->
+<!--          </span>-->
+<!--          <span style="display:inline">-->
+<!--            <input-->
+<!--              type="radio"-->
+<!--              id="other"-->
+<!--              name="gender"-->
+<!--              value="others"-->
+<!--              style="display:inline"-->
+<!--            />-->
+<!--            <label for="others" class="" style="display:inline">Others</label>-->
+<!--          </span>-->
+<!--        </div>-->
+<!--        <br />-->
+
+<!--        <div class="block">-->
+<!--          <label for="emp_name" class="words">Marital Status: </label>-->
+<!--          <input-->
+<!--            type="radio"-->
+<!--            id="married"-->
+<!--            name="status"-->
+<!--            value="married"-->
+<!--            style="display:inline"-->
+<!--          />-->
+<!--          <label for="married" style="display:inline">Married</label>-->
+<!--          <input-->
+<!--            type="radio"-->
+<!--            id="single"-->
+<!--            name="status"-->
+<!--            value="single"-->
+<!--            style="display:inline"-->
+<!--          />-->
+<!--          <label for="single" style="display:inline">Single</label>-->
+<!--          <br />-->
+<!--        </div>-->
+<!--      </form>-->
+
+<!--      <br />-->
+<!--      <br />-->
+<!--      <br />-->
+
+<!--      <button class="btn btn-primary" onclick="writeEmployee()">-->
+<!--        Submit-->
+<!--      </button>-->
+<!--    </div>-->
+<!--    <a href="https://www.freepik.com/vectors/people" hidden-->
+<!--      >People vector created by stories - www.freepik.com</a-->
+<!--    >-->
+<!--  </body>-->
+</html>

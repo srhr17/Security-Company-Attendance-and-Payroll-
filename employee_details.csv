@@ -1,0 +1,9 @@
+EmployeeID,Name,Father Name,E-Mail,Address,Phone Number,Emergency Phone Number,Educational Qualification,Experience,DOB,DOJ,Salary,Aadhar Number,Role
+0,John,SH,srose@gmail.com,dddddd,9099990990,7878787878.0,BTE,ad,2021-05-12,2021-05-23,34,climbing,
+EMP_2,dhanalakshmi Saravanan,DS,dhanagobu@gmail.com,20B Thirumal Nagar,9198424200006,,BTE,0,2021-05-22,2021-05-15,34,3453233,football
+EMP_3,illinois institute of technology main campus,DS,mortiz2@iit.edu,"3201 S. State street
+mtcc room 203",3125673020,917598669966.0,BTE,ad,2021-06-02,2021-06-06,34,5245634,snooker
+EMP_4,Velociity junior college,JK,velkarthi11@yahoo.com,madhapur,917598669966,3125673020.0,BTE,Del,2021-05-19,2021-05-21,890,67890635,fishkeeping
+EMP_5,Cyntia,John,JohnCynthia@yahoot.com,20B Thirumal Nagar,9198424200006,9600648032.0,BTE,0,2021-05-15,2021-05-28,890,5245634,swimming
+EMP_6,Cyntia,John,Cyntia@yahot.com,uhflmwv 178 dfvm;,9600648032,9198424200006.0,BTE,0,2021-05-13,2021-05-29,890,3453233,swimming
+SRSS_7,Cyntia,John,velkarthi11@yahoo.com,20A Thirumal Nagar,+917598669966,09600648032,BTE,Del,2021-05-06,2021-05-28,890,5245634,swimming
